@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>(Conver)T-relojv0.0.1</title>
+  </head>
+  <body>
+    <h1>T-relojv0.0.1</h1>
+    <script>
+        //*declaracion de variables, la variable cont funciona como un tipo de reolector de datos//*
+        var min=0;
+        var seg=0;
+        var horas=0;
+        var cont =prompt("ingrese el tiempo en segundos"," ");
+        //*el numero que ingrese el usuario, podra hacer una conversion, esta primera version, busca hacer conversion de segundos a version  reloj //*
+        if(cont>=1000000000){
+          //*este if sirve para aguantar los usuarios ya que tiene un limite de 9 digitos... ya que no responde :,v//*
+          for (var i = 0; i < cont; i++) {
+            if(seg!=59){
+              seg++;
+            }else {
+              seg=0;
+              min++;
+            }if(min==60){
+              min=0;
+              horas++;
+            }
+          }
+          document.write("Horas "+ horas +"<br>"+ " Minutos "+ min +"<br>"+ " Segundos"+seg+" <br> "+ " Vamos a ver si este reloj funciona XD");
+        }else{
+          document.write("El valor es demasiado grande para hacer la conversion :,v help me!!!"+"<br>"+"actualiza la pagina para poder ingresar la cantidad en segundo que quiere convertir en tiempo reloj");
+        }
+        </script>
+  </body>
+</html>
